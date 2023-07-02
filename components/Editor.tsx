@@ -21,7 +21,7 @@ const Editor = ({ entry }) => {
     data: value,
     onSave: async (_value) => {
       setIsLoading(true);
-      const { data } = await updateEntry(entry.id, _value);
+      const data = await updateEntry(entry.id, _value);
       setAnalysis(data.analysis);
       setIsLoading(false);
     },
