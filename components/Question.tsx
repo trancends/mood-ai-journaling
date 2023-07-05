@@ -6,12 +6,16 @@ const Question = () => {
   const [value, setValue] = useState("");
 
   const onChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   return (
     <div>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <input
           onChange={onChange}
           value={value}
