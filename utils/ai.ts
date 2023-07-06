@@ -4,7 +4,7 @@ import { StructuredOutputParser } from "langchain/output_parsers";
 import { z } from "zod";
 import { Document } from "langchain/document";
 import { loadQARefineChain } from "langchain/chains";
-import { OpenAIEmbeddings } from "langchain/embeddings";
+import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 
 const parser = StructuredOutputParser.fromZodSchema(
@@ -57,7 +57,7 @@ export const analyze = async (content) => {
   }
 };
 
-const qa = async (question, entries) => {
+export const qa = async (question, entries) => {
   const docs = entries.map((entry) => {
     return new Document({
       pageContent: entry.content,
