@@ -6,7 +6,7 @@ const getEntry = async (id) => {
   const user = await getUserByClerkID();
   const entry = await prisma.journalEntry.findUnique({
     where: {
-      id_userId: {
+      userId_id: {
         userId: user.id,
         id,
       },
