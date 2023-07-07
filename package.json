@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.21.10",
@@ -29,9 +30,14 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint-config-prettier": "^8.8.0",
+    "jsdom": "^22.1.0",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "prisma": "^4.16.1"
+    "prisma": "^4.16.1",
+    "vitest": "^0.33.0"
   }
 }
